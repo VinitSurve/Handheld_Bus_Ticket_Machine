@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <form name="f1" onsubmit="calculate(event)">
+                <label>Enter Starting Point</label><br><br>
+                <input type="radio" name="start" id="Start-Pan-Rly-Stn" value="Panvel Railway Station"><label for="Start-Pan-Rly-Stn">Panvel Railway Station</label><br>
+                <input type="radio" name="start" id="Start-Pan-Bus-Stand" value="Panvel Bus Stand"><label for="Start-Pan-Bus-Stand">Panvel Bus Stand</label><br>
+                <input type="radio" name="start" id="Start-Mall" value="Orion Mall"><label for="Start-Mall">Orion Mall</label><br>
+                <input type="radio" name="start" id="Start-Amardham" value="Amardham"><label for="Start-Amardham">Amardham</label><br>
+                <br><br>
+                <label>Enter Ending Point</label><br><br> 
+                <input type="radio" name="end" id="End-Pan-Bus-Stand" value="Panvel Bus Stand"><label for="End-Pan-Bus-Stand">Panvel Bus Stand</label><br>
+                <input type="radio" name="end" id="End-Mall" value="Orion Mall"><label for="End-Mall">Orion Mall</label><br> 
+                 <input type="radio" name="end" id="End-Amardham" value="Amardham"><label for="End-Amardham">Amardham</label><br>
+                <input type="radio" name="end" id="End-Garden-Hotel" value="Garden Hotel"><label for="End-Garden-Hotel">Garden Hotel</label><br><br>
+                <label for="persons">Number of Persons:</label><br><br>
+    <div>
+        <button type="button" id="decrement">-</button>
+        <input type="number" id="persons" name="persons" min="1" value="1">
+        <button type="button" id="increment">+</button>
+    </div><br>
+                <input type="text" name="display" id="display"><br><br>
+                <input type="submit" value="Submit" onclick="calculate(event)">
+                <input type="reset">
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>
