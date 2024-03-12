@@ -15,18 +15,30 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function calculate(event) {
-    event.preventDefault(); // prevent default form submission behavior
-    
+    event.preventDefault();  
     const stops = {
         "Panvel Railway Station": 0,
         "Panvel Bus Stand": 1,
         "Orion Mall": 2,
         "Amardham": 3,
-        "Garden Hotel": 5
+        "Garden Hotel": 4,
+        "Khanda Colony": 5,
+        "Netra Jyot": 6,
+        "Asudgaon": 7,
+        "Mgm": 8,
+        "Kalamboli Colony": 9,
+        "Kamothe": 10,
+        "Mansarover": 11,
+        "Taloja Phata": 12,
+        "Gharkul": 13,
+        "Kopra": 14,
+        "Kharghar": 15,
+        "Kharghar Railway Station": 16, 
+        "Belapur":17
     };
     
-    let startLocation = document.querySelector('input[name="start"]:checked');
-    let endLocation = document.querySelector('input[name="end"]:checked');
+    let startLocation = document.getElementById('start').value;
+    let endLocation = document.getElementById('end').value;
     let numberOfPersons = parseInt(document.getElementById('persons').value);
     
     if (!startLocation || !endLocation) {
@@ -34,8 +46,8 @@ function calculate(event) {
         return;
     }
     
-    const startingIndex = stops[startLocation.value];
-    const endingIndex = stops[endLocation.value];
+    const startingIndex = stops[startLocation];
+    const endingIndex = stops[endLocation];
     
     if (startingIndex === undefined || endingIndex === undefined) {
         alert("Invalid Locations");
@@ -43,9 +55,20 @@ function calculate(event) {
     }
     
     let numberOfStops = Math.abs(endingIndex - startingIndex);
+    let price;
+
+    // Set minimum fare and price per stop
+    const minimumFare = 7; // Minimum fare for up to 4 stops
+    const pricePerStop = 1; // Price per stop beyond the minimum fare
     
-    let price = numberOfStops * 7 * numberOfPersons; // Multiply price with the number of persons
+    if (numberOfStops <= 4) {
+        price = minimumFare;
+    } else {
+        price = minimumFare + (numberOfStops - 5) * pricePerStop;
+    }
+    
+    price *= numberOfPersons; // Multiply by the number of persons
     
     const display = document.getElementById('display');
-    display.value = price;
+    display.value = Math.round(price); // Round the price to the nearest integer
 }

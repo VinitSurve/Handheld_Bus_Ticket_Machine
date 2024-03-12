@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <form name="f1" onsubmit="calculate(event)">
+                <label for="start">Select Starting Point:</label><br>
+                <select id="start" name="start">
+                    <option value="Panvel Railway Station">Panvel Railway Station</option>
+                    <option value="Panvel Bus Stand">Panvel Bus Stand</option>
+                    <option value="Orion Mall">Orion Mall</option>
+                    <option value="Amardham">Amardham</option>
+                    <option value="Garden Hotel">Garden Hotel</option>
+                    <option value="Khanda Colony">Khanda Colony</option>
+                    <option value="Netra Jyot">Netra Jyot</option>
+                    <option value="Asudgaon">Asudgaon</option>
+                    <option value="Mgm">Mgm</option>
+                    <option value="Kalamboli Colony">Kalamboli Colony</option>
+                    <option value="Kamothe">Kamothe</option>
+                    <option value="Mansarover">Mansarover</option>
+                    <option value="Taloja Phata">Taloja Phata</option>
+                    <option value="Gharkul">Gharkul</option>
+                    <option value="Kopra">Kopra</option>
+                    <option value="Kharghar">Kharghar</option>
+                    <option value="Kharghar Railway Station">Kharghar Railway Station</option>
+                </select><br><br>
+                
+                <label for="end">Select Ending Point:</label><br>
+                <select id="end" name="end">
+                    <option value="Panvel Bus Stand">Panvel Bus Stand</option>
+                    <option value="Orion Mall">Orion Mall</option>
+                    <option value="Amardham">Amardham</option>
+                    <option value="Garden Hotel">Garden Hotel</option>
+                    <option value="Khanda Colony">Khanda Colony</option>
+                    <option value="Netra Jyot">Netra Jyot</option>
+                    <option value="Asudgaon">Asudgaon</option>
+                    <option value="Mgm">Mgm</option>
+                    <option value="Kalamboli Colony">Kalamboli Colony</option>
+                    <option value="Kamothe">Kamothe</option>
+                    <option value="Mansarover">Mansarover</option>
+                    <option value="Taloja Phata">Taloja Phata</option>
+                    <option value="Gharkul">Gharkul</option>
+                    <option value="Kopra">Kopra</option>
+                    <option value="Kharghar">Kharghar</option>
+                    <option value="Kharghar Railway Station">Kharghar Railway Station</option>
+                    <option value="Belapur">Belapur</option>
+                </select><br><br>
+                
+                <label for="persons">Number of Persons:</label><br>
+                <div>
+                    <button type="button" id="decrement">-</button>
+                    <input type="number" id="persons" name="persons" min="1" value="1">
+                    <button type="button" id="increment">+</button>
+                </div><br>
+                
+                <input type="text" name="display" id="display"><br><br>
+                <input type="submit" value="Submit">
+                <input type="reset">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
