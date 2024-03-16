@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar {
+    text-align: center;
+    position: relative;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+#swapLocationsButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10vw;
+    background-color: #f0f0f0;
+    border: .1em solid black ;
+    cursor: pointer;
+    width: 10em;
+    height: 3em;
+    background-color: orange;
+    color: white ;
+}
+
+.content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.non-ac {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.switch {
+    position: absolute;
+    left: 1em;
+    top: 0.5em;
+}
+
+form {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    font-size: 1.2em;
+}
+
+label {
+    text-align: left;
+    font-size: 1.2em;
+}
+
+
+
+#persons {
+    width: 55em;
+    height: 3em;
+    text-align: center;
+    font-size: .75em;
+}
+select{
+    display: inline-block;
+    width: 18em;
+    height: 3em;
+    background-color: yellow ;
+    border-radius: 10vw;
+    text-align: center ;
+    font-size: 1em;
+    border: .1em solid black ;
+}
+#decrement {
+    width: 2.3em;
+    height: 2.3em;
+    border-radius: 10vw;
+    font-size: 1.1em;
+    border: .1em solid black ;
+    background-color: red;
+    color: black;
+}
+#increment {
+    width: 2.3em;
+    height: 2.3em;
+    border-radius: 10vw;
+    font-size: 1.1em;
+    border: .1em solid black ;
+    background-color: greenyellow;
+    color: black;
+}
+#display{
+    border-radius: 10vw;
+    height: 3em;
+    font-size: 1em;
+    text-align: center ;
+    border: .1em solid black ;
+}
+
+button{
+    width: 16.5em;
+    height: 3.5em;
+    border: .1em solid black ;
+    outline: none;
+    background: #5558ff;
+    color: #fff;
+    font-size: 1.1em;
+    border-radius: 10vw;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: bold ;
+}
+
+.check-box{
+    width: 72.5px;
+    height: 72.5px;
+    border-radius: 40px;
+    box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    right: -40px;
+    opacity: 0;
+}
+
+.check-box svg{
+    width: 38px;
+    margin: 15px;
+}
+
+svg path{
+    stroke-width: 3;
+    stroke: #fff;
+    stroke-dasharray: 34;
+    stroke-dashoffset: 34;
+    stroke-linecap: round;
+}
+
+.active{
+    background: green;
+    transition: 1s;
+}
+
+.active .check-box{
+    right: 0;
+    opacity: 1;
+    transition: 1s;
+}
+.active p{
+    margin-right: 125px;
+    transition: 1s;
+}
+
+.active svg path{
+    stroke-dashoffset: 0;
+    transition: 1s;
+    transition-delay: 1s;
+}
+.noselect{
+ width: 16.5m;
+ height: 3em;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ background: red;
+ border: none;
+ border-radius: 10vw;
+ box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+ background: #e62222;
+}
+
+.noselect, .noselect span {
+ transition: 200ms;
+}
+
+.noselect .text {
+ transform: translateX(35px);
+ color: white;
+}
+
+.noselect .icon {
+ position: absolute;
+ transform: translateX(110px);
+ height: 40px;
+ width: 40px;
+ right: 6.5em;
+ top: 1em;
+ 
+}
+
+.noselect svg {
+ width: 20px;
+ fill: #eee;
+}
+
+.select :hover {
+ background: #ff3636;
+}
+
+.noselect :hover .text {
+ color: transparent;
+}
+
+.noselect:hover .icon {
+ width: 150px;
+ border-left: none;
+ transform: translateX(0);
+}
+
+.noselect :focus {
+ outline: none;
+}
+
+.noselect :active .icon svg {
+ transform: scale(0.8);
+}
+.delete{
+    width: 16.5em;
+    height: 3em;
+    border-radius: 10vw;
+    background-color: red;
+    font-size: 1.1em;
+    border: .1em solid black ;
+    color: white ;
+}
+input{
+    font-weight: bold ;
+}
+.person{
+    border: .1em solid black ;
+    border-radius: 1vw;
+}
