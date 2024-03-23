@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 2vw 2vw 2vw 2vw ;
 }
 
 .container {
@@ -67,11 +67,12 @@ label {
 
 
 #persons {
-    width: 55em;
+    width: 3em;
     height: 3em;
     text-align: center;
     font-size: .75em;
 }
+
 select{
     display: inline-block;
     width: 18em;
@@ -238,8 +239,13 @@ svg path{
 }
 input{
     font-weight: bold ;
+    text-align: center;
 }
 .person{
     border: .1em solid black ;
     border-radius: 1vw;
+}
+.delete:active{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
